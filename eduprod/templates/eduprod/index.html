@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="flashcard-container">
+        <h1>Flashcards</h1>
+        <h2>Questions and Answers</h2>
+        <div id="flashcard"></div>
+        <button id="actionButton" onclick="showAnswer()">Answer</button>
+        <button id="nextButton" onclick="nextFlashcard()" style="display:none;">Next</button>
+        <button id="takeTestButton" onclick="takeTest()">Revise</button>
+        <button id="endTestButton" onclick="endTest()" style="display:none;">Edit</button>
+        <button id="shuffleButton" onclick="shuffleFlashcards()">Shuffle</button>
+        <div id="dots"></div>
+    </div>
+
+    <!-- New form for adding flashcards -->
+    <form class="flashcard-form" id="addFlashcardForm" style="display: block;">
+        <label for="question">Question:</label>
+        <input type="text" id="question" required><br><br>
+        <label for="answer">Answer:</label>
+        <input type="text" id="answer" required><br><br>
+        <div class="button-group">
+            <button type="button" onclick="addFlashcard()">Add Flashcard</button>
+            <button type="button" onclick="resetFlashcards()">Reset Flashcards</button>
+            <button id="deleteFlashcardButton" onclick="deleteFlashcard()" style="display:none;">Delete Flashcard</button>
+        </div>
+    </form>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
